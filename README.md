@@ -44,6 +44,10 @@ TestDeveloper/
 └── assets/          # Gambar bengkel, peta, ilustrasi, dan ikon
 ```
 
+## Demo
+
+Proyek dapat dicoba secara online di [test-developer.vercel.app](https://test-developer.vercel.app/).
+
 ## Teknologi
 
 - HTML5
