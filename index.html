@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#02b150" />
+        <title>Pilih Jadwal Servis | Bengkel Worklight</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+        <main class="phone">
+            <section id="booking-screen">
+                <header class="hero">
+                    <img class="hero-image" src="assets/workshop.png" alt="Interior BengkelKu Margonda" />
+                    <div class="hero-shade"></div>
+                    <button class="back" type="button" aria-label="Kembali">
+                        <img src="assets/arrow-left.png" alt="" />
+                    </button>
+                    <span class="open-chip">Senin - Jumat</span>
+                </header>
+
+                <article
+                  id="workshop-details"
+                  class="workshop-card"
+                  role="button"
+                  tabindex="0"
+                  aria-label="Lihat detail BengkelKu Margonda"
+                >
+                    <div class="title-row">
+                        <h1>BengkelKu Margonda</h1>
+                        <span>Depok</span>
+                    </div>
+                    <p class="rating">
+                        <img src="assets/star.png" alt="" />
+                        4,7 (512 ulasan)
+                    </p>
+                    <img class="divider" src="assets/divider.svg" alt="" />
+                    <p>
+                        <img src="assets/pliers.png" alt="" />
+                        Servis rutin (ganti oli, cek rem, cek busi)
+                    </p>
+                    <p>
+                        <img src="assets/clock.png" alt="" />
+                        Estimasi pengerjaan 60 menit
+                    </p>
+                </article>
+
+                <section class="scheduler" aria-label="Pilih jadwal servis">
+                    <h2>Pilih Tanggal</h2>
+                    <div id="dates" class="date-list" role="list"></div>
+                    <h2>Pilih Jam</h2>
+                    <div id="times" class="time-list"></div>
+                    <p id="availability" class="availability">
+                        Pilih tanggal untuk melihat jam tersedia.
+                    </p>
+                </section>
+
+                <footer class="booking-footer">
+                    <p>Harga belum termasuk suku cadang</p>
+                    <button id="book" class="book" type="button" disabled>
+                        Booking sekarang · Rp85.000
+                    </button>
+                </footer>
+            </section>
+
+            <section id="success-screen" class="success hidden" aria-labelledby="success-title">
+                <img class="success-motor" src="assets/motor.png" alt="Mekanik sedang melakukan servis motor" />
+                <h1 id="success-title">Servis berhasil dibooking!</h1>
+                <p class="success-subtitle">Mohon untuk datang tepat waktu</p>
+                <div class="confirmation">
+                    <p class="muted">Bengkel Motor</p>
+                    <strong>BengkelKu Margonda</strong>
+                    <p class="muted">Booking pada tanggal</p>
+                    <strong id="confirmation-date"></strong>
+                    <p class="muted">Jam</p>
+                    <strong id="confirmation-time"></strong>
+                    <p class="muted">Biaya servis (belum termasuk suku cadang)</p>
+                    <strong>Rp 85.000,00</strong>
+                </div>
+                <button id="add-calendar" class="book" type="button">Tambahkan ke kalender Anda</button>
+                <button id="new-booking" class="outline-book" type="button">Kembali ke layar utama</button>
+            </section>
+
+            <section id="details-screen" class="details hidden" aria-labelledby="details-title">
+                <header class="detail-header">
+                    <button id="details-back" class="back" type="button" aria-label="Kembali">
+                        <img src="assets/arrow-left.png" alt="" />
+                    </button>
+                    <div>
+                        <h1 id="details-title">BengkelKu Margonda</h1>
+                        <p><img src="assets/star.png" alt="" /> 4,7 (512 ulasan)</p>
+                    </div>
+                    <span>Depok</span>
+                </header>
+
+                <img class="map" src="assets/map.png" alt="Peta lokasi BengkelKu Margonda" />
+
+                <section class="detail-info">
+                    <div class="info-row">
+                        <img src="assets/location.png" alt="" />
+                        <div>
+                            <h2>Alamat</h2>
+                            <p>Jl. Seniur, Karya Makmur, Kec. Pemali,<br />Kabupaten Depok, Kepulauan Jawa<br />33215, Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <img src="assets/black-clock.png" alt="" />
+                        <div>
+                            <h2>Jam Buka</h2>
+                            <p>Senin - Jumat, 08:00 sampai 17:00</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="reviews" aria-labelledby="reviews-title">
+                    <h2 id="reviews-title">Ulasan</h2>
+                    <p class="review-total"><img src="assets/rate-star.png" alt="Rating 4,7 dari 5" /> <span>4,7 (512 ulasan)</span></p>
+                    <article class="review">
+                        <strong>Alice Siregar</strong>
+                        <p><img src="assets/star.png" alt="" /> 4,7</p>
+                        <p>Servicenya rapi, bagus, dan cepat.<br />Motor saya lebih mulus</p>
+                    </article>
+                    <article class="review">
+                        <strong>Bob Sidoarjo</strong>
+                        <p><img src="assets/star.png" alt="" /> 5</p>
+                        <p>Motornya bisa jalan lagi setelah<br />diselimuti abu krakatau kemarin,,</p>
+                    </article>
+                    <article class="review">
+                        <strong>Citra Wulandari</strong>
+                        <p><img src="assets/star.png" alt="" /> 5</p>
+                        <p>Petugasnya ramah dan pengerjaannya cepat.</p>
+                    </article>
+                </section>
+            </section>
+        </main>
+        <div id="toast" class="toast" role="status" aria-live="polite">
+            <span aria-hidden="true">✓</span> Jadwal berhasil ditambahkan ke kalender
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
