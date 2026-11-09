@@ -2,6 +2,10 @@
 
 Implementasi UI mobile untuk pemesanan servis motor di BengkelKu Margonda, Depok. Proyek ini dibuat berdasarkan desain Figma dan brief tugas UI/UX Designer.
 
+## Demo
+
+Proyek dapat dicoba secara online di [test-developer.vercel.app](https://test-developer.vercel.app/).
+
 ## Tujuan
 
 Membantu pengguna memilih jadwal servis rutin dengan cepat melalui tampilan mobile berukuran 360 x 800 px. Pengguna dapat melihat informasi bengkel, memilih tanggal dan jam yang tersedia, lalu melakukan booking servis.
@@ -43,10 +47,6 @@ TestDeveloper/
 ├── app.js           # Logika pemilihan jadwal, booking, detail, dan toast
 └── assets/          # Gambar bengkel, peta, ilustrasi, dan ikon
 ```
-
-## Demo
-
-Proyek dapat dicoba secara online di [test-developer.vercel.app](https://test-developer.vercel.app/).
 
 ## Teknologi
 
